@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['Webscraper.py'],
+a = Analysis(['webs_scraper.py'],
              pathex=['C:\\Users\\cabis\\Documents\\ITM695\\self_learning'],
              binaries=[],
              datas=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='Webscraper',
+          name='webs_scraper',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,

@@ -1,3 +1,4 @@
+'''
 ### https://www.youtube.com/watch?v=rfscVS0vtbw
 
 ## working with strings
@@ -26,6 +27,26 @@ print(round(3.56,1))
 print(floor(3.7))
 print(ceil(3.7))
 print(sqrt(25))
+'''
 
-##  Getting input from a user
+##  displaying the max and min
+list = []
 
+while True:
+    num = input("Enter a number: ")
+    if num == "done" : 
+        break
+    
+    try:
+        
+    	num = int(num)
+        list.append(num)
+        
+    except: 
+        
+        print("Invalid input")
+        continue
+            
+       
+print("Maximum is", max(list))
+print("Minimum is", min(list))

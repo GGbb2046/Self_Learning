@@ -1,0 +1,5 @@
+There is a typo about p-value in the video 3.4. Since this course will not be updated without new funding, the correct calculation of p-value is explained here in detail.  
+
+If Ha: mu not equal 0, it is two tail test and  p-value=2(1-norm.cdf(np.abs(z), 0, 1))
+if Ha: mu>0, it is upper tail test and  p-value=1-norm.cdf(z,0,1)
+if Ha:mu<0, it is lower tail test and  p-value=norm.cdf(z,0,1)

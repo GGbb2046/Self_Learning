@@ -1,6 +1,9 @@
 import numpy as np
 import pandas as pd
-df = pd.read_csv('ex1data1.txt', header = None)
+#%matplotlib inline
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('LR.csv', header = None)
 df.head()
 
 theta = [0,0]   
@@ -9,6 +12,7 @@ def hypothesis(theta, X):
     return theta[0] + theta[1]*X
 def cost_calc(theta, X, y):
     return (1/2*m) * np.sum((hypothesis(theta, X) - y)**2)
+
 
 m = len(df)
 def gradient_descent(theta, X, y, epoch, alpha):
@@ -26,8 +30,9 @@ def predict(theta, X, y, epoch, alpha):
     theta, cost = gradient_descent(theta, X, y, epoch, alpha)
     return hypothesis(theta, X), cost, theta
 
-%matplotlib inline
-import matplotlib.pyplot as plt
+
+y_predict, cost, theta = predict(theta, df[0], df[1], 2000, 0.01)
+
 plt.figure()
 plt.scatter(df[0], df[1], label = 'Original y')
 plt.scatter(df[0], y_predict, label = 'predicted y')
