@@ -42,3 +42,5 @@ In other words, a(?=b) matches the "a" which is followed by the string 'b', with
 a(?!b) will match the "a" in "ac", but not the "a" in "ab"
 ?<= positive look behind
 ?<! negative look behind
+
+https://levelup.gitconnected.com/7-different-ways-to-merge-dictionaries-in-python-30148bf27add # dicionaries
